@@ -1,0 +1,8 @@
+com\nuevafrecuencia\patria5kweb\repository\ParticipantRepository.class
+com\nuevafrecuencia\patria5kweb\model\Participant.class
+com\nuevafrecuencia\patria5kweb\controller\PublicController.class
+com\nuevafrecuencia\patria5kweb\service\ParticipantService.class
+com\nuevafrecuencia\patria5kweb\controller\AdminController.class
+com\nuevafrecuencia\patria5kweb\config\WebConfig.class
+com\nuevafrecuencia\patria5kweb\Patria5kWebApplication.class
+com\nuevafrecuencia\patria5kweb\config\AdminInterceptor.class

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Panel de Coordinadores</title><link rel="stylesheet" th:href="@{/css/app.css}"></head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar"><div class="sidebar-logo-wrap"><img src="/images/nueva_frecuencia_logo.jpg" class="sidebar-logo" alt="Nueva Frecuencia"></div><div class="sidebar-event">CORRIENDO POR<br>MI PATRIA <strong>5K</strong></div><div class="guate-badge">GUATEMALA</div>
+  <nav class="menu"><a class="menu-btn" href="/">INICIO / PORTADA</a><a class="menu-btn" href="/inscripcion">INSCRIPCIÓN</a><a class="menu-btn" href="/patrocinadores">PATROCINADORES</a><a class="menu-btn active" href="/admin">COORDINADORES</a></nav><div class="sidebar-version"><b>PANEL PRIVADO</b><br>Administración de corredores</div></aside>
+  <main class="workspace"><header class="topbar"><h1>COORDINADORES</h1><div class="topbar-actions"><form action="/admin/logout" method="post"><button class="tiny-btn" type="submit">CERRAR SESIÓN</button></form></div></header>
+    <section class="admin-page">
+      <div class="admin-summary"><div><span>PARTICIPANTES REGISTRADOS</span><strong th:text="${total}">0</strong></div><a class="secondary-btn compact" href="/admin/exportar.csv">EXPORTAR CSV / EXCEL</a></div>
+      <form class="search-bar" action="/admin" method="get"><input type="search" name="q" th:value="${q}" placeholder="Buscar por número, nombre, municipio o teléfono"><button class="primary-btn button-element" type="submit">BUSCAR</button><a class="clear-search" href="/admin">Limpiar</a></form>
+      <div class="table-wrap"><table class="participants-table"><thead><tr><th>Número</th><th>Nombre</th><th>Edad</th><th>Municipio</th><th>Teléfono</th><th>Inscripción</th><th>Acciones</th></tr></thead>
+        <tbody><tr th:each="p : ${participants}"><td><b th:text="${p.bibNumber}">PATRIA-0001</b></td><td th:text="${p.name}">Nombre</td><td th:text="${p.age}">18</td><td th:text="${p.municipality}">Municipio</td><td th:text="${p.phone}">5555-1234</td><td th:text="${#temporals.format(p.createdAt, 'dd/MM/yyyy HH:mm')}">fecha</td><td class="actions-cell"><a th:href="@{'/admin/participantes/' + ${p.id} + '/editar'}" class="edit-link">EDITAR</a><form th:action="@{'/admin/participantes/' + ${p.id} + '/eliminar'}" method="post" onsubmit="return confirm('¿Eliminar a este participante?');"><button class="delete-link" type="submit">ELIMINAR</button></form></td></tr>
+        <tr th:if="${#lists.isEmpty(participants)}"><td colspan="7" class="empty-table">No hay participantes para mostrar.</td></tr></tbody>
+      </table></div>
+    </section>
+  </main>
+</div></body></html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Coordinadores | Corriendo por mi Patria 5K</title><link rel="stylesheet" th:href="@{/css/app.css}"></head>
+<body>
+<div class="admin-login-page">
+  <div class="admin-login-card reveal">
+    <img src="/images/nueva_frecuencia_logo.jpg" alt="Nueva Frecuencia" class="admin-logo">
+    <div class="eyebrow">ÁREA PRIVADA</div><h1>COORDINADORES</h1><p>Acceso a participantes, edición y exportación.</p>
+    <form action="/admin/login" method="post"><label>Contraseña<input type="password" name="password" inputmode="numeric" autocomplete="current-password" required autofocus></label><div th:if="${error}" th:text="${error}" class="login-error"></div><button class="primary-btn button-element" type="submit">ENTRAR AL PANEL</button></form>
+    <a class="back-link" href="/">← Volver al inicio</a>
+  </div>
+</div>
+</body></html>
