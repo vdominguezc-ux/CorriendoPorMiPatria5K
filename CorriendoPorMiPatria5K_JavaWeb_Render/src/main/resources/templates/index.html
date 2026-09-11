@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corriendo por mi Patria 5K</title>
+  <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-logo-wrap"><img src="/images/nueva_frecuencia_logo.jpg" class="sidebar-logo" alt="Nueva Frecuencia"></div>
+    <div class="sidebar-event">CORRIENDO POR<br>MI PATRIA <strong>5K</strong></div>
+    <div class="guate-badge">GUATEMALA</div>
+    <nav class="menu">
+      <a class="menu-btn active" href="/">INICIO / PORTADA</a>
+      <a class="menu-btn" href="/inscripcion">INSCRIPCIÓN</a>
+      <a class="menu-btn" href="/patrocinadores">PATROCINADORES</a>
+      <a class="menu-btn" href="/admin">COORDINADORES</a>
+    </nav>
+    <div class="sidebar-version"><b>VERSIÓN WEB • RENDER</b><br>13 SEP 2026 • 6:30 AM<br>Plaza Américas</div>
+  </aside>
+
+  <main class="workspace">
+    <header class="topbar">
+      <h1>INICIO</h1>
+      <div class="topbar-meta">DOMINGO 13 SEP 2026 &nbsp;•&nbsp; 6:30 AM &nbsp;•&nbsp; NUEVA FRECUENCIA</div>
+    </header>
+
+    <section class="home-content">
+      <div class="cover-card reveal">
+        <div class="cover-label">PORTADA OFICIAL</div>
+        <div class="cover-stage">
+          <img src="/images/venado_guatemala.png" alt="Venado corriendo con bandera de Guatemala, copa y medalla" class="deer-cover">
+          <div class="cover-shine"></div>
+        </div>
+      </div>
+
+      <div class="info-card reveal delay-1">
+        <div class="eyebrow">CARRERA 5K • GUATEMALA</div>
+        <h2>CORRIENDO<br><span>POR MI PATRIA</span><br><strong>5K</strong></h2>
+        <p class="lead">Inscríbete, recibe tu número de corredor y forma parte de una carrera hecha con orgullo por Guatemala.</p>
+        <div class="event-data">
+          <div><b>Fecha:</b> Domingo 13 de septiembre de 2026</div>
+          <div><b>Hora:</b> 6:30 AM</div>
+          <div><b>Lugar:</b> Parqueo Plaza Américas</div>
+        </div>
+        <a th:if="${registrationOpen}" href="/inscripcion" class="primary-btn">INSCRIBIRME AHORA</a>
+        <div th:unless="${registrationOpen}" class="registration-closed-badge">🔒 INSCRIPCIONES CERRADAS</div>
+        <a href="/patrocinadores" class="secondary-btn">VER PATROCINADORES</a>
+        <div th:if="${registrationOpen}" class="notice"><b>INSCRIPCIÓN:</b> nombre, edad, municipio y número telefónico. Tu dorsal se genera automáticamente.</div>
+        <div th:unless="${registrationOpen}" class="notice"><b>REGISTRO FINALIZADO:</b> ya no se aceptan nuevas inscripciones. Los coordinadores conservan acceso al listado existente.</div>
+      </div>
+    </section>
+
+    <section class="sponsor-strip">
+      <div class="strip-title"><b>PATROCINADORES OFICIALES</b><span>Gracias por hacer posible Corriendo por mi Patria 5K</span></div>
+      <div class="marquee"><div class="marquee-track">
+        <img src="/images/sponsors/sponsor_01.jpg" alt="C.C.R. Impresiones">
+        <img src="/images/sponsors/sponsor_02.jpg" alt="Rocas y Cascadas">
+        <img src="/images/sponsors/sponsor_03.jpg" alt="El Líder">
+        <img src="/images/sponsors/sponsor_04.png" alt="Access Computación">
+        <img src="/images/sponsors/sponsor_05.jpg" alt="HP Store">
+        <img src="/images/sponsors/sponsor_06.jpg" alt="Futbolandia">
+        <img src="/images/sponsors/sponsor_07.jpg" alt="Don Quique">
+        <img src="/images/sponsors/sponsor_08.jpg" alt="Loa">
+        <img src="/images/sponsors/sponsor_09.jpg" alt="Tennis Nais">
+        <img src="/images/sponsors/sponsor_10.jpg" alt="X Sport">
+        <img src="/images/sponsors/sponsor_01.jpg" alt="C.C.R. Impresiones">
+        <img src="/images/sponsors/sponsor_02.jpg" alt="Rocas y Cascadas">
+        <img src="/images/sponsors/sponsor_03.jpg" alt="El Líder">
+        <img src="/images/sponsors/sponsor_04.png" alt="Access Computación">
+        <img src="/images/sponsors/sponsor_05.jpg" alt="HP Store">
+        <img src="/images/sponsors/sponsor_06.jpg" alt="Futbolandia">
+        <img src="/images/sponsors/sponsor_07.jpg" alt="Don Quique">
+        <img src="/images/sponsors/sponsor_08.jpg" alt="Loa">
+        <img src="/images/sponsors/sponsor_09.jpg" alt="Tennis Nais">
+        <img src="/images/sponsors/sponsor_10.jpg" alt="X Sport">
+      </div></div>
+    </section>
+  </main>
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>

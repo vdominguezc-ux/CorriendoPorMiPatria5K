@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripciones cerradas | Corriendo por mi Patria 5K</title>
+  <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-logo-wrap"><img src="/images/nueva_frecuencia_logo.jpg" class="sidebar-logo" alt="Nueva Frecuencia"></div>
+    <div class="sidebar-event">CORRIENDO POR<br>MI PATRIA <strong>5K</strong></div>
+    <div class="guate-badge">GUATEMALA</div>
+    <nav class="menu">
+      <a class="menu-btn" href="/">INICIO / PORTADA</a>
+      <a class="menu-btn active" href="/inscripcion">INSCRIPCIÓN</a>
+      <a class="menu-btn" href="/patrocinadores">PATROCINADORES</a>
+      <a class="menu-btn" href="/admin">COORDINADORES</a>
+    </nav>
+    <div class="sidebar-version"><b>VERSIÓN WEB • RENDER</b><br>13 SEP 2026 • 6:30 AM<br>Plaza Américas</div>
+  </aside>
+
+  <main class="workspace">
+    <header class="topbar">
+      <h1>INSCRIPCIÓN</h1>
+      <div class="topbar-meta">DOMINGO 13 SEP 2026 &nbsp;•&nbsp; 6:30 AM &nbsp;•&nbsp; PARQUEO PLAZA AMÉRICAS</div>
+    </header>
+
+    <section class="register-layout closed-layout">
+      <div class="mini-cover reveal">
+        <img src="/images/venado_guatemala.png" alt="Corriendo por mi Patria 5K">
+        <div class="mini-cover-copy"><span>CARRERA 5K • GUATEMALA</span><b>Gracias a todos los participantes inscritos.</b></div>
+      </div>
+      <div class="form-card closed-card reveal delay-1">
+        <div class="eyebrow">REGISTRO FINALIZADO</div>
+        <div class="lock-mark">🔒</div>
+        <h2>INSCRIPCIONES CERRADAS</h2>
+        <p>El período de inscripción para <b>Corriendo por mi Patria 5K</b> ha finalizado.</p>
+        <p>Los corredores ya inscritos conservan su número y sus datos permanecen guardados.</p>
+        <div class="event-reminder">
+          <div>📅 <b>Domingo 13 de septiembre de 2026</b></div>
+          <div>⏰ <b>6:30 AM</b></div>
+          <div>📍 <b>Parqueo Plaza Américas</b></div>
+        </div>
+        <a href="/" class="primary-btn">VOLVER AL INICIO</a>
+        <a href="/admin" class="secondary-btn">ACCESO COORDINADORES</a>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>
