@@ -45,9 +45,11 @@
           <div><b>Hora:</b> 6:30 AM</div>
           <div><b>Lugar:</b> Parqueo Plaza Américas</div>
         </div>
-        <a href="/inscripcion" class="primary-btn">INSCRIBIRME AHORA</a>
+        <a th:if="${registrationOpen}" href="/inscripcion" class="primary-btn">INSCRIBIRME AHORA</a>
+        <div th:unless="${registrationOpen}" class="registration-closed-badge">🔒 INSCRIPCIONES CERRADAS</div>
         <a href="/patrocinadores" class="secondary-btn">VER PATROCINADORES</a>
-        <div class="notice"><b>INSCRIPCIÓN:</b> nombre, edad, municipio y número telefónico. Tu dorsal se genera automáticamente.</div>
+        <div th:if="${registrationOpen}" class="notice"><b>INSCRIPCIÓN:</b> nombre, edad, municipio y número telefónico. Tu dorsal se genera automáticamente.</div>
+        <div th:unless="${registrationOpen}" class="notice"><b>REGISTRO FINALIZADO:</b> ya no se aceptan nuevas inscripciones. Los coordinadores conservan acceso al listado existente.</div>
       </div>
     </section>
 

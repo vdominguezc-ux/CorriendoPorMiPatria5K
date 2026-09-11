@@ -8,3 +8,23 @@
 @media(max-width:1080px){body{background:var(--bg)}.app-shell{width:100%;min-height:100vh;margin:0;grid-template-columns:1fr}.sidebar{min-height:auto;padding:12px 14px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;border-right:0;border-bottom:1px solid var(--line)}.sidebar-logo-wrap{height:auto}.sidebar-logo{width:70px;height:70px}.sidebar-event,.guate-badge,.sidebar-version{display:none}.menu{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.menu-btn{font-size:10px;padding:10px 5px}.menu-btn:hover,.menu-btn.active{transform:none}.topbar{height:auto;min-height:62px}.topbar-meta{font-size:9px;text-align:right}.home-content{grid-template-columns:1fr 1fr;padding:14px}.cover-stage{height:520px}.info-card{min-height:578px;padding:35px 24px}.sponsor-grid{grid-template-columns:repeat(3,1fr)}.register-layout{padding:18px;grid-template-columns:.8fr 1.2fr}.mini-cover,.mini-cover img{min-height:600px}}
 @media(max-width:760px){.sidebar{grid-template-columns:56px 1fr;position:sticky;top:0;z-index:30}.sidebar-logo{width:50px;height:50px}.menu-btn{font-size:9px;border-width:1px}.topbar{padding:12px 14px;align-items:flex-start}.topbar h1{font-size:18px}.topbar-meta{max-width:170px}.home-content,.register-layout{grid-template-columns:1fr;padding:12px}.cover-stage{height:auto}.deer-cover{height:auto;max-height:none}.info-card{min-height:auto;padding:28px 20px}.info-card h2,.form-card h2{font-size:27px}.sponsor-strip{margin:0 12px 12px}.marquee-track img{width:120px;height:62px}.mini-cover{min-height:0}.mini-cover img{min-height:0;height:auto}.form-card{padding:24px 18px}.form-row{grid-template-columns:1fr}.sponsors-page{padding:20px 14px}.sponsor-grid{grid-template-columns:repeat(2,1fr);gap:10px}.sponsor-card{min-height:125px}.sponsor-card img{max-height:100px}.admin-page{padding:14px}.admin-summary{align-items:flex-start;flex-direction:column}.search-bar{grid-template-columns:1fr}.confirmation-actions,.edit-actions{grid-template-columns:1fr}.bib-number{font-size:34px}.admin-login-card,.confirmation-card{padding:24px 18px}}
 @media print{body{background:#fff}.confirmation-page{background:#fff;padding:0}.confirmation-card{box-shadow:none;border:3px solid #222}.confirmation-actions{display:none}}
+
+/* Estado de inscripciones cerradas */
+.registration-closed-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 20px;
+  margin: 8px 8px 8px 0;
+  border: 2px solid #111;
+  border-radius: 12px;
+  background: #ffd900;
+  color: #111;
+  font-weight: 900;
+  letter-spacing: .04em;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+.closed-card { text-align: center; }
+.lock-mark { font-size: 54px; line-height: 1; margin: 6px 0 12px; }
+.closed-layout .event-reminder { text-align: left; }
